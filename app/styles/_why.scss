@@ -1,0 +1,118 @@
+.why{
+	position: relative;
+	background-image: url('../images/why_bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 440px;
+	background-attachment: fixed;
+	@media (max-width: $screen-sm-max){
+		height: auto;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #06153e;
+		opacity: .68;
+	}
+	h2{
+		font-size: 30px;
+		font-weight: 400;
+		color: #fff;
+		margin: 0;
+		position: relative;
+		z-index: 1;
+		padding-top: 30px;
+		@media (max-width: $screen-xs-max){
+			font-size: 20px;
+		}
+	}
+	&__block{
+		position: relative;
+		z-index: 1;
+		padding-top: 40px;
+		@media (max-width: $screen-sm-max){
+			padding-bottom: 40px;
+		}
+		@media (max-width: $screen-xs-max){
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	&__blog{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 40px;
+		@media (max-width: $screen-sm-max){
+			padding-bottom: 30px;
+			padding-left: 0;
+		}
+		@media (max-width: $screen-xs-max){
+			text-align: center;
+			margin: 0 auto;
+			max-width: 290px;
+			width: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 0;
+		}
+	}
+	.right_wh{
+		border-right: 1px solid #fff;
+		@media (max-width: $screen-xs-max){
+			border-right: none;
+		}
+	}
+	.bottom_wh{
+		&:after{
+			content: '';
+			position: absolute;
+			border-bottom: 1px solid #fff;
+			top: 145px;
+			left: 0;
+			width: 100%;
+			@media (max-width: $screen-sm-max){
+				top: 107px;
+			}
+			@media (max-width: $screen-xs-max){
+				border-bottom: none;
+			}
+		}
+	}
+	&__item{
+		display: inline-block;
+		@media (max-width: $screen-xs-max){
+			display: block;
+		}
+		i{
+			font-size: 70px;
+			color: #fff;
+			@media (max-width: $screen-sm-max){
+				font-size: 40px;
+			}
+		}
+	}
+	&__items{
+		display: inline-block;
+		padding-left: 10px;
+		p{
+			margin: 0;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 400;
+			@media (max-width: $screen-md-max){
+				font-size: 16px;
+			}
+		}
+	}
+}

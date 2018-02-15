@@ -1,0 +1,47 @@
+.port{
+	background-color: #fbfbfb;
+	h2{
+		font-size: 30px;
+		font-weight: 400;
+		color: #000;
+		margin: 0;
+		position: relative;
+		z-index: 1;
+		padding-top: 30px;
+		@media (max-width: $screen-xs-max){
+			font-size: 20px;
+		}
+	}
+	&__block{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+		.port_hg{
+			height: 270px;
+			@media (max-width: $screen-sm-max){
+				height: auto;
+			}
+			@media (max-width: $screen-xs-max){
+				height: 270px;
+			}
+		}
+		.btn{
+			display: inline-block;
+			padding: 5px 30px;
+			background-color: #121d3d;
+			border: 1px solid transparent;
+			text-decoration: none;
+			outline: none;
+			font-size: 18px;
+			color: #fff;
+			transition: all .3s;
+			position: relative;
+			z-index: 2;
+			&:hover{
+				border: 1px solid #121d3d;
+				background-color: transparent;
+				color: #121d3d;
+			}
+		}
+	}
+}

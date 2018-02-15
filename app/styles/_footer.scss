@@ -1,0 +1,90 @@
+.footer{
+	background-color: #1a1d1e;
+	height: 80px;
+	@media (max-width: $screen-xs-max){
+		height: auto;
+	}
+	&__block{
+		line-height: 78px;
+		@media (max-width: $screen-sm-max){
+			line-height: 50px;
+		}
+	}
+	&__flab{
+		@media (max-width: $screen-xs-max){
+			text-align: center;
+		}
+		p{
+			position: relative;
+			z-index: 2;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 400;
+			color: #fff;
+			margin: 0;
+			@media (max-width: $screen-sm-max){
+				line-height: 22px;
+				padding-top: 20px;
+			}
+			@media (max-width: $screen-xs-max){
+				font-size: 15px;
+			}
+		}
+	}
+	&__logo{
+		text-align: center;
+		@media (max-width: $screen-sm-max){
+			line-height: 78px;
+		}
+		@media (max-width: $screen-xs-max){
+			line-height: 50px;
+		}
+		a{
+			position: relative;
+			z-index: 2;
+			outline: none;
+		}
+	}
+	&__social{
+		text-align: right;
+		@media (max-width: $screen-xs-max){
+			text-align: center;
+		}
+		h3{
+			margin: 0;
+			font-size: 18px;
+			font-weight: 400;
+			color: #fff;
+			line-height: 40px;
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+			line-height: 30px;
+			@media (max-width: $screen-xs-max){
+				margin-bottom: 15px;
+			}
+			li{
+				display: inline-block;
+				list-style-type: none;
+				padding-right: 10px;
+				&:last-child{
+					padding-right: 0;
+				}
+				a{
+					position: relative;
+					z-index: 2;
+					outline: none;
+					i{
+						color: #fff;
+						font-size: 18px;
+						transition: all .5s;
+						&:hover{
+							transform: rotate(360deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}

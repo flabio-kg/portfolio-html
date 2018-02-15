@@ -1,0 +1,21 @@
+$icon-font-path: '../fonts/';
+@import "../fonts/icon/css/icon.css";
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+@import "_helpers.scss";
+@import "_works.scss";
+@import "_popup.scss";
+@import "_head.scss";
+@import "_brif.scss";
+@import "_footer.scss";
+@import "_about.scss";
+@import "_contact.scss";
+@import "_advantages.scss";
+@import "_why.scss";
+@import "_port.scss";
+@import "_prices.scss";
+@import "_review.scss";
+@import "_services.scss";
