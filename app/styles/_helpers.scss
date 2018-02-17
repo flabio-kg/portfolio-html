@@ -648,10 +648,7 @@ body{
 	top: 0;
 	bottom: 0;
 	background-color: #fff;
-	z-index: 10000000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	z-index: 10000;
 }
 .butterfly {
 	animation: hover 250ms cubic-bezier(.48,.01,.54,1) infinite;
@@ -661,6 +658,9 @@ body{
 	transform-style: preserve-3d;
 	transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateY(0px);
 	width: 30px;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
 	&::before {
 		background-image: url('../images/body.png');
 		background-repeat: no-repeat;
@@ -691,7 +691,9 @@ body{
 	transform-origin: 50% 50%;
 	transform: translateX(-40px) translateY(100px);
 	width: 100px;
-
+	position: absolute;
+	top: 47%;
+	left: 50%;	
 }
 
 .wing-bf {
