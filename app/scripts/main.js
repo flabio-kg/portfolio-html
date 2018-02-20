@@ -97,19 +97,18 @@ $(".tabs li a.close").on("click", function(e){
   // });
 
   $('.open-popup-link').magnificPopup({
-    type: 'inline',
-
-    fixedContentPos: true,
-    fixedBgPos: true,
-
-    overflowY: 'auto',
-
-    closeBtnInside: true,
-    preloader: false,
-    
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom'
+    type: 'inline',    
+    midClick: false,
+    callbacks: {
+        open: function() {
+            $('.scrolled').css({'overflow-y': 'scroll'});
+        },
+        close: function() {
+            $('.scrolled').css({'overflow-y': 'visible'});
+        }
+    },
+    removalDelay: 800,
+    mainClass: 'mfp-move-horizontal'
   });
 
   $('.open-popup-link1').magnificPopup({

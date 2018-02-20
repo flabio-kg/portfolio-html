@@ -332,7 +332,7 @@
                     <h4>20 000</h4>
                   </div>
                 </div>
-                <a href="#popup_prices" class="btn open-popup-link">ЗАКАЗАТЬ</a>
+                <a href="#popup_pric" class="btn open-popup-link">ЗАКАЗАТЬ</a>
               </div>
             </div>
 
@@ -577,43 +577,34 @@
           </div>
         </div><!-- popup34 -->
 
-        <div id="popup_prices" class="popup-default mfp-hide">
+        <div id="popup_prices" class="popup-default mfp-hide mfp-with-anim">
           <div class="popup__block">
-            <div class="popup__prices">
-              <div class="popup__default">
-                <form action="#">
-                  <h4>Мы ответим в течении <br>24-часов</h4>
-                  <!-- Hidden Required Fields -->
-                  <input type="hidden" name="project_name" value="Site Name">
-                  <input type="hidden" name="admin_email" value="info@flabio.kg">
-                  <input type="hidden" name="form_subject" value="Form Subject">
-                  <!-- END Hidden Required Fields -->
-                  <div class="inputBox">
-                    <div class="inputText">Ваше имя</div>
-                    <input type="text" name="Ваше имя" class="input">
-                  </div>
-                  <div class="inputBox">
-                    <div class="inputText">Ваш телефон</div>
-                    <input type="phone" name="Ваш телефон" class="input">
-                  </div>
-                  <button type="submit" class="_button-sub">ОТПРАВИТЬ</button>
-                  <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-                </form>
+            <form action="#">
+              <h4>Мы ответим в течении <br>24-часов</h4>
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Site Name">
+              <input type="hidden" name="admin_email" value="info@flabio.kg">
+              <input type="hidden" name="form_subject" value="Form Subject">
+              <!-- END Hidden Required Fields -->
+              <div class="inputBox">
+                <div class="inputText">Ваше имя</div>
+                <input type="text" name="Ваше имя" class="input">
               </div>
-            </div>
+              <div class="inputBox">
+                <div class="inputText">Ваш телефон</div>
+                <input type="phone" name="Ваш телефон" class="input">
+              </div>
+              <button type="submit" class="_button-sub">ОТПРАВИТЬ</button>
+            </form>
           </div>
         </div>
         <!-- popup_prices -->
-        <div class="popup-default mfp-hide" id="popup_pric">
-          <div class="popups">
-            <div class="popup__default">
-              <div class="titles">
-                <h3>Спасибо</h3>
-                <i class="fa fa-check-square-o"></i>
-                <h4>Ваша заявка принята</h4>
-              </div>
+        <div id="popup_pric" class="popup-default mfp-hide mfp-with-anim">
+            <div class="thanks">
+              <h3>Спасибо</h3>
+              <i class="fa fa-check-square-o"></i>
+              <h4>Ваша заявка принята</h4>
             </div>
-          </div>
         </div>
         <!-- popup_prices -->
 

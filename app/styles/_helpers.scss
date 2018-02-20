@@ -2,83 +2,6 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
-.my-mfp-slide-bottom .zoom-anim-dialog {
-	opacity: 0;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-
-	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-
-}
-
- // animate in 
-.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
-	opacity: 1;
-	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-}
-
-// animate out 
-.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
-	opacity: 0;
-
-	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-}
-
- // Dark overlay, start state 
-.my-mfp-slide-bottom.mfp-bg {
-	opacity: 0;
-
-	-webkit-transition: opacity 0.3s ease-out; 
-	-moz-transition: opacity 0.3s ease-out; 
-	-o-transition: opacity 0.3s ease-out; 
-	transition: opacity 0.3s ease-out;
-}
-// animate in 
-.my-mfp-slide-bottom.mfp-ready.mfp-bg {
-	opacity: 0.8;
-}
-// animate out 
-.my-mfp-slide-bottom.mfp-removing.mfp-bg {
-	opacity: 0;
-}
-
-.mfp-wrap ~ * {
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
-  filter: blur(4px);
-}
-
-.mfp-container{
-	position: relative;
-	display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .mfp-close{
-  	display: inline-block;
-  	color: #000;
-  }
-}
-
 .no-padding{
 	padding: 0;
 }
@@ -802,3 +725,107 @@ body{
 	}
 }
 // preloader end
+
+.mfp-move-horizontal {  
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.8s;    
+    transform: translateX(-50px) rotateY( -25deg );
+  }  
+  &.mfp-bg {
+    opacity: 0;
+	transition: all 0.8s;
+  }  
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: translateX(0) rotateY( 0deg );
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }  
+  &.mfp-removing {    
+    .mfp-with-anim {
+      transform: translateX(50px) rotateY( 25deg );
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }    
+  }  
+}
+
+.advantages{
+	padding-top: 30px;
+	background-color: #fff;
+	overflow: hidden;
+	h2{
+		font-size: 30px;
+		font-weight: 400;
+		color: #000;
+		margin: 0;
+		@media (max-width: $screen-xs-max){
+			font-size: 20px;
+		}
+	}
+	&__block{
+		padding-top: 30px;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			background-image: url('../images/basket.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			max-width: 518px;
+			width: 100%;
+			height: 377px;
+			top: 0;
+			right: -30%;
+			@media (max-width: $screen-md-max){
+				right: -40%;
+			}
+			@media (max-width: $screen-xs-max){
+				display: none;
+			}
+		}
+	}
+	&__blog{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		padding-bottom: 50px;
+		@media (max-width: $screen-sm-max){
+			padding-bottom: 30px;
+		}
+		@media (max-width: $screen-xs-max){
+			text-align: center;
+			display: block;
+		}
+	}
+	&__item{
+		display: inline-block;
+		@media (max-width: $screen-xs-max){
+			display: block;
+		}
+	}
+	&__items{
+		display: inline-block;
+		padding-left: 10px;
+		p{
+			margin: 0;
+			color: #000;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 20px;
+			@media (max-width: $screen-md-max){
+				font-size: 16px;
+			}
+		}
+	}
+}
