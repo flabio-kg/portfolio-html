@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const imageResize = require('gulp-image-resize');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -24,6 +25,20 @@ gulp.task('styles', () => {
     .pipe($.if(dev, $.sourcemaps.write()))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
+});
+
+gulp.task('cleancrop', del.bind(null, ['app/images/thumbnail']));
+
+gulp.task('crop', ['cleancrop'], () => {
+  gulp.src('app/images/croped/*')
+    .pipe(imageResize({
+      width : 15,
+      height : 15,
+      crop : false,
+      upscale : true,
+      filter: 'Gaussian'
+    }))
+    .pipe(gulp.dest('app/images/thumbnail'));
 });
 
 gulp.task('scripts', () => {

@@ -23,7 +23,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -35,7 +35,7 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <!-- start -->
     <div class="preloader">
       <div class="butterfly">
@@ -143,7 +143,7 @@
         <div class="contact__block">
           <h2>Контакты</h2>
           <div class="row">
-            
+
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="contact__item">
                 <form action="#">
@@ -175,7 +175,7 @@
                     <div class="box">
                       <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} файлов выбрано" multiple / style="display: none;">
                       <label for="file-1"><img src="images/choose.png" alt=""><span>Прикрепить документ&hellip;</span></label>
-                    </div>    
+                    </div>
                   </div>
                 </form>
               </div>
@@ -206,7 +206,7 @@
       <div class="container">
         <div class="footer__block">
           <div class="row">
-            
+
             <div class="col-sm-4 col-xs-12">
               <div class="footer__flab">
                 <p>© «Flabio» 2017. Все права защищены.</p>
@@ -237,7 +237,7 @@
     <!-- footer end -->
 
     <!-- end -->
-    
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
     <!-- build:js scripts/vendor.js -->
@@ -250,9 +250,10 @@
     <script src="/bower_components/typed.js/lib/typed.js"></script>
     <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/bower_components/bLazy/blazy.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-        
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -267,9 +268,28 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript">
+    // map start
+    var map;
+    DG.then(function () {
+      map = DG.map('map', {
+        center: [42.485300, 78.402300],
+        scrollWheelZoom: false,
+        zoom: 17
+      });
+
+      var myIcon = L.icon({
+        iconUrl: '../images/mark.png',
+        iconSize: [25, 40],
+      });
+
+      DG.marker([42.485390, 78.402055], {icon: myIcon}) .addTo(map).bindPopup('Flabio <br />г.Каракол  ул.Королькова 55').bindLabel('Flabio <br />г.Каракол  ул.Королькова 55');
+    });
+    // map end
+    </script>
   </body>
 </html>

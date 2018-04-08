@@ -1,3 +1,7 @@
+var bLazy = new Blazy({
+  // Options
+});
+
   var clickEffect = {
     init: function init() {
       $(document).on('click', function (e) {
@@ -18,8 +22,10 @@
 
 $( document ).ready(function() {
 
-  $('.preloader').fadeOut('slow', function () {
-    $(this).remove();
+  $(window).on("load", function () {
+    $('.preloader').fadeOut('slow', function () {
+      $(this).remove();
+    });
   });
 
   var typed = new Typed('.typed_js', {
@@ -58,14 +64,14 @@ $("a[href^='#']").on("click", function(e){
 });
 
 // tab New
-$(".add").on("click", function(e){ 
-  if($(".tabs li").size() < 4){ 
+$(".add").on("click", function(e){
+  if($(".tabs li").size() < 4){
     $(".tabs li.active").removeClass("active");
     $(".tabs").append('<li class="active"></li>');
     $(".page iframe").attr("src", "");
   }
 });
-  
+
 // tab Click.active
 $(".tabs li").on("click", function(e){
   $(".tabs li.active").removeClass("active");
@@ -73,7 +79,7 @@ $(".tabs li").on("click", function(e){
   $(".page iframe").attr("src", $(this).find("a").attr("href"));
   e.preventDefault();
 });
-  
+
 // tab Close
 $(".tabs li a.close").on("click", function(e){
   $(this).closest("li").remove();
@@ -97,7 +103,7 @@ $(".tabs li a.close").on("click", function(e){
   // });
 
   $('.open-popup-link').magnificPopup({
-    type: 'inline',    
+    type: 'inline',
     midClick: false,
     callbacks: {
         open: function() {
@@ -240,30 +246,4 @@ $(document).ready(function(){
 // choose file конец
 
 
-});
-
-// map start
-var map;
-DG.then(function () {
-  map = DG.map('map', {
-    center: [42.485300, 78.402300],
-    scrollWheelZoom: false,
-    zoom: 17
-  });
-
-  var myIcon = L.icon({
-    iconUrl: '../images/mark.png',
-    iconSize: [25, 40],
-  });
-
-  DG.marker([42.485390, 78.402055], {icon: myIcon}) .addTo(map).bindPopup('Flabio <br />г.Каракол  ул.Королькова 55').bindLabel('Flabio <br />г.Каракол  ул.Королькова 55');
-});
-// map end
-
-$('.works__blog').masonry({
-  layoutMode: 'masonryHorizontal',
-  itemSelector: '.works__item',
-  masonryHorizontal: {
-    rowHeight: 50
-  }
 });

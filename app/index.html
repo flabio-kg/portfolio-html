@@ -23,7 +23,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -32,9 +32,9 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <!-- start -->
-    <div class="preloader">
+    <!-- <div class="preloader">
       <div class="butterfly">
         <div class="wing-bf">
           <div class="bit-bf"></div>
@@ -44,12 +44,12 @@
         </div>
       </div>
       <div class="shadow"></div>
-    </div>
+    </div> -->
     <!-- main start -->
     <div class="mmenu-nav"></div>
-    
 
-    <div class="main main_bg">
+
+    <div class="main main_bg b-lazy" data-src="images/croped/main_bg.png" style="background-image: url('images/thumbnail/main_bg.png');">
       <div class="main__topline">
         <div class="container">
           <div class="row">
@@ -194,7 +194,7 @@
     <!-- advantages end -->
 
     <!-- why start -->
-    <div class="why">
+    <div class="why b-lazy" data-src="images/croped/why_bg.jpg" style="background-image: url('images/thumbnail/why_bg.jpg');">
       <div class="container">
         <h2>Почему мы?</h2>
         <div class="why__block">
@@ -269,7 +269,7 @@
         <h2>Портфолио</h2>
         <div class="port__block">
           <div class="row">
-            
+
             <div class="col-md-4 col-sm-4">
               <a class="works__item works__item--width open-popup-link port_hg" href="#popup29">
                 <img class="itemse" src="images/log-img29.jpg" alt="">
@@ -284,7 +284,7 @@
 
             <div class="col-md-4 col-sm-4">
               <a class="works__item works__item--width open-popup-link port_hg" href="#popup2">
-                <img class="itemse" src="images/log-img2.jpg" alt="">
+                <img class="itemse b-lazy" src="images/thumbnail/log-img2.jpg" data-src="images/croped/log-img2.jpg" alt="">
                 <div class="items">
                   <img src="images/log2.png" alt="">
                 </div>
@@ -316,12 +316,12 @@
     <!-- port end -->
 
     <!-- prices start -->
-    <div class="prices">
+    <!-- <div class="prices">
       <div class="container">
         <h2>Цены</h2>
         <div class="prices__block">
           <div class="row">
-            
+
             <div class="col-sm-4">
               <div class="prices__item">
                 <img src="images/6.png" alt="">
@@ -367,11 +367,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- prices end -->
 
     <!-- review start -->
-    <div class="review">
+    <!-- <div class="review">
       <div class="container">
         <h2>Отзывы</h2>
         <h3>Что наши клиенты говорят ...</h3>
@@ -379,7 +379,7 @@
 
           <div class="review__item">
             <div class="row">
-              
+
 
               <div class="col-md-2 col-md-push-4 col-md-offset-1 col-sm-3 col-sm-push-4">
                 <div class="review__image">
@@ -406,7 +406,7 @@
 
           <div class="review__item">
             <div class="row">
-              
+
 
               <div class="col-md-2 col-md-push-4 col-md-offset-1 col-sm-3 col-sm-push-4">
                 <div class="review__image">
@@ -421,7 +421,7 @@
                   <p>Хочется отметить тщательный подход сотрудников ОсОО “Flabio” и внедрение новейших технологии программирования и веб-дизайна</p>
                 </div>
               </div>
-              
+
               <div class="col-md-3 col-md-pull-8 col-md-offset-1 col-sm-4 col-sm-pull-8">
                 <div class="review__list">
                   <a href="#"><img src="images/list.jpg" alt=""></a>
@@ -433,7 +433,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- review end -->
 
     <!-- footer start -->
@@ -441,7 +441,7 @@
       <div class="container">
         <div class="footer__block">
           <div class="row">
-            
+
             <div class="col-sm-4 col-xs-12">
               <div class="footer__flab">
                 <p>© «Flabio» 2017. Все права защищены.</p>
@@ -476,7 +476,7 @@
       <div class="container-fluid">
 
         <div id="popup2" class="white-popup mfp-hide">
-          
+
           <div class="popup__block">
             <div class="row">
               <div class="col-md-6 col-sm-6 no-padding">
@@ -504,7 +504,7 @@
         </div><!-- popup2 -->
 
         <div id="popup29" class="white-popup mfp-hide">
-          
+
           <div class="popup__block">
             <div class="row">
               <div class="col-md-6 col-sm-6 no-padding">
@@ -548,7 +548,7 @@
         </div><!-- popup29 -->
 
         <div id="popup34" class="white-popup mfp-hide">
-          
+
           <div class="popup__block">
             <div class="row">
               <div class="col-md-6 col-sm-6 no-padding">
@@ -613,7 +613,7 @@
     <!-- popup end -->
 
     <!-- end -->
-    
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
     <!-- build:js scripts/vendor.js -->
@@ -626,9 +626,10 @@
     <script src="/bower_components/typed.js/lib/typed.js"></script>
     <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/bower_components/bLazy/blazy.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -643,7 +644,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

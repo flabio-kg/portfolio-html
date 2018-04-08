@@ -6,7 +6,7 @@ body{
 	padding: 0;
 }
 
-.title_h2{	
+.title_h2{
 	padding-bottom: 30px;
 	h2{
 		font-size: 35px;
@@ -317,6 +317,17 @@ body{
 	}
 }
 
+// .b-lazy {
+// 	opacity:0;
+// 	transform: scale(3);
+// 	transition: all 500ms;
+// }
+// .b-loaded {
+// 	opacity:1;
+// 	transform: scale(1);
+// }
+
+
 .mm-navbar {
 	height: 80px;
 	img{
@@ -570,7 +581,7 @@ body{
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background-color: #fff;
+	background-color: lighten(#121d3d,1);
 	z-index: 10000;
 }
 .butterfly {
@@ -616,7 +627,7 @@ body{
 	width: 100px;
 	position: absolute;
 	top: 47%;
-	left: 50%;	
+	left: 50%;
 }
 
 .wing-bf {
@@ -726,16 +737,16 @@ body{
 }
 // preloader end
 
-.mfp-move-horizontal {  
+.mfp-move-horizontal {
   .mfp-with-anim {
     opacity: 0;
-    transition: all 0.8s;    
+    transition: all 0.8s;
     transform: translateX(-50px) rotateY( -25deg );
-  }  
+  }
   &.mfp-bg {
     opacity: 0;
 	transition: all 0.8s;
-  }  
+  }
   &.mfp-ready {
     .mfp-with-anim {
       opacity: 1;
@@ -744,16 +755,16 @@ body{
     &.mfp-bg {
       opacity: 0.8;
     }
-  }  
-  &.mfp-removing {    
+  }
+  &.mfp-removing {
     .mfp-with-anim {
       transform: translateX(50px) rotateY( 25deg );
       opacity: 0;
     }
     &.mfp-bg {
       opacity: 0;
-    }    
-  }  
+    }
+  }
 }
 
 .advantages{

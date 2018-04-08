@@ -9,7 +9,8 @@
     "magnific-popup": "^1.1.0",
     "jQuery.mmenu": "mmenu#^6.1.8",
     "typed.js": "^2.0.6",
-    "malihu-custom-scrollbar-plugin": "^3.1.5"
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "bLazy": "blazy#^1.8.2"
   },
   "overrides": {
     "bootstrap-sass": {
