@@ -1,16 +1,18 @@
 .footer{
 	background-color: #1a1d1e;
-	height: 80px;
+	
 	@media (max-width: $screen-xs-max){
 		height: auto;
 	}
 	&__block{
 		line-height: 78px;
+
 		@media (max-width: $screen-sm-max){
 			line-height: 50px;
 		}
 	}
 	&__flab{
+
 		@media (max-width: $screen-xs-max){
 			text-align: center;
 		}
@@ -22,6 +24,9 @@
 			font-weight: 400;
 			color: #fff;
 			margin: 0;
+			@media (max-width: 1199.98px) {
+				line-height: 20px;
+			}
 			@media (max-width: $screen-sm-max){
 				line-height: 22px;
 				padding-top: 20px;
